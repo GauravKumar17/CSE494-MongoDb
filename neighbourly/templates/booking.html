@@ -53,15 +53,13 @@
             Request completion ✓
           </button>
         </form>
-        {% endif %}{% elif account.role == 'customer' %}{% if booking.status ==
-        'completion_pending' %}
+        {% endif %}{% elif account.role == 'customer' %}{% if booking.status == 'completion_pending' %}
         <form method="post" action="{% url 'booking_action' booking.id %}">
           {% csrf_token %}<button name="action" value="complete" class="btn">
             Confirm completed service ✓
           </button>
         </form>
-        {% elif booking.status == 'requested' or booking.status == 'confirmed'
-        %}
+        {% elif booking.status == 'requested' or booking.status == 'confirmed' %}
         <form
           method="post"
           action="{% url 'booking_action' booking.id %}"
@@ -103,8 +101,7 @@
     <p>{{ existing_review.comment }}</p>
     {% elif account.role == 'customer' %}
     <form class="stack" action="{% url 'review' booking.id %}" method="post">
-      {% csrf_token %}{% with form=review_form %}{% include 'partials/form.html'
-      %}{% endwith %}<button class="btn">Share your review ↗</button>
+      {% csrf_token %}{% with form=review_form %}{% include 'partials/form.html' %}{% endwith %}<button class="btn">Share your review ↗</button>
     </form>
     {% else %}
     <p class="muted">The customer can now leave a review.</p>

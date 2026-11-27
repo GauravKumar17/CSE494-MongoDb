@@ -1,10 +1,6 @@
 # Neighbourly
 
-**Cooperative Gig Services Platform for Household and Community Services**  
-CSE494 · Lovely Professional University  
-Gaurav Kumar · K4E2338  
-Course instructor: Dr. Manpreet Singh Sehgal  
-Repository: https://github.com/GauravKumar17/CSE494-MongoDb
+
 
 A working Django website with a MongoDB database, built for a college demonstration. Customers discover providers and book local services; workers manage their profiles and requests; administrators approve profiles and inspect reports. The interface uses a cream, forest-green and peach palette, custom vector illustration, responsive cards and layouts.
 

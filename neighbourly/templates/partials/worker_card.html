@@ -1,8 +1,7 @@
 <article class="worker-card">
   <div class="worker-art tone-{{ worker.category }}">
     <span class="avatar">{{ worker.initials }}</span
-    ><span class="category-label">{{ worker.category_name }}</span>{% if
-    worker.is_demo %}<span class="demo-label">DEMO PROFILE</span>{% endif %}
+    ><span class="category-label">{{ worker.category_name }}</span>{% if worker.is_demo %}<span class="demo-label">DEMO PROFILE</span>{% endif %}
   </div>
   <div class="worker-body">
     <div class="worker-title">
@@ -18,8 +17,7 @@
       <span>⌖ {{ worker.locality }}</span
       ><span
         >{% if worker.review_count %}★ {{ worker.rating }}
-        <small>({{ worker.review_count }})</small>{% else %}New here ✧{% endif
-        %}</span
+        <small>({{ worker.review_count }})</small>{% else %}New here ✧{% endif %}</span
       >
     </div>
     <div class="worker-bottom">

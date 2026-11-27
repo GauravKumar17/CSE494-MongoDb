@@ -6,14 +6,12 @@
       <h1>Hello, <em>{{ account.name }}.</em></h1>
       <p>
         {% if account.role == 'worker' %}Your skills make a difference. Here’s
-        what’s happening.{% else %}A happier home starts with a little help.{%
-        endif %}
+        what’s happening.{% else %}A happier home starts with a little help.{% endif %}
       </p>
     </div>
     {% if account.role == 'worker' %}<a class="btn" href="{% url 'profile' %}"
       >Edit my service profile ↗</a
-    >{% else %}<a class="btn" href="{% url 'services' %}">Find a service ↗</a>{%
-    endif %}
+    >{% else %}<a class="btn" href="{% url 'services' %}">Find a service ↗</a>{% endif %}
   </div>
 </section>
 <section class="wrap dashboard-content">

@@ -1,5 +1,4 @@
-{% extends 'base.html' %}{% block title %}Find your person · Neighbourly{%
-endblock %}{% block content %}
+{% extends 'base.html' %}{% block title %}Find your person · Neighbourly{% endblock %}{% block content %}
 <section class="page-heading wrap">
   <span class="eyebrow">LOCAL TALENT. REAL CONNECTIONS.</span>
   <h1>Find your <em>kind of helpful.</em></h1>
@@ -13,13 +12,7 @@ endblock %}{% block content %}
         {% for c in categories %}
         <option
           value="{{ c.slug }}"
-          {%
-          if
-          selected=""
-          ="c.slug"
-          %}selected{%
-          endif
-          %}
+          {% if selected == c.slug %}selected{% endif %}
         >
           {{ c.name }}
         </option>
@@ -41,8 +34,7 @@ endblock %}{% block content %}
     <span class="pill">People first. Always.</span>
   </div>
   <div class="worker-grid">
-    {% for worker in workers %}{% include 'partials/worker_card.html' %}{% empty
-    %}
+    {% for worker in workers %}{% include 'partials/worker_card.html' %}{% empty %}
     <div class="empty">
       <span class="big-symbol">⌕</span>
       <h2>No matches just yet.</h2>

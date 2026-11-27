@@ -24,14 +24,7 @@
       <nav class="nav" aria-label="Main navigation">
         <a
           href="{% url 'services' %}"
-          {%
-          if
-          request.path=""
-          ="/services/"
-          %}class="active"
-          {%
-          endif
-          %}
+          {% if request.path == "/services/" %}class="active"{% endif %}
           >Find a service</a
         ><a href="{% url 'community' %}">Our community</a
         ><a href="{% url 'how_it_works' %}">How it works</a>

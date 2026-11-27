@@ -182,8 +182,7 @@
     <a class="text-link" href="{% url 'services' %}">Meet all providers ↗</a>
   </div>
   <div class="worker-grid">
-    {% for worker in featured %} {% include 'partials/worker_card.html' %} {%
-    empty %}
+    {% for worker in featured %} {% include 'partials/worker_card.html' %} {% empty %}
     <div class="empty">
       <h3>Your neighbourhood starts here.</h3>
       <p>
